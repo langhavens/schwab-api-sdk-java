@@ -42,10 +42,4 @@ public class QuotesService {
                 .bodyToFlux(new ParameterizedTypeReference<Map<String, QuoteResponse>>() {});
     }
 
-    @Bean
-    public String test() {
-        this.getQuotes("TSLA", null).doOnNext(System.err::println).subscribe();
-        return "";
-    }
-
 }
