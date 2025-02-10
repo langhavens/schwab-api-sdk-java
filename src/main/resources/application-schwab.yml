@@ -1,0 +1,24 @@
+
+
+schwab:
+  api:
+    base-url: https://api.schwabapi.com
+    market-data-url: ${schwab.api.base-url}/marketdata/v1
+    instruments-url: ${schwab.api.market-data-url}/instruments
+    markets-url: ${schwab.api.market-data-url}/markets
+    movers-url: ${schwab.api.market-data-url}/movers
+    quotes-url: ${schwab.api.market-data-url}/quotes
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          schwab:
+            authorization-grant-type: client_credentials
+            client-id: ${SCHWAB_API_APP_KEY}
+            client-secret: ${SCHWAB_API_SECRET}
+        provider:
+          schwab:
+            authorization-uri: https://api.schwabapi.com/v1/oauth/authorize?response_type=code&client_id={{client-id}}&scope=readonly&redirect_uri=https://127.0.0.1
+            token-uri: https://api.schwabapi.com/v1/oauth/token
