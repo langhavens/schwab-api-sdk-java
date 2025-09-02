@@ -7,11 +7,11 @@ plugins {
 
 group = 'com.langhavens'
 version = '0.0.1'
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_21
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
@@ -26,8 +26,8 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client:3.4.1'
-	implementation 'org.springframework.boot:spring-boot-starter-webflux:3.4.1'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client:3.5.5'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux:3.5.5'
 
 	compileOnly 'org.projectlombok:lombok:1.18.36'
 	annotationProcessor 'org.projectlombok:lombok:1.18.36'

@@ -2,7 +2,8 @@
 A Java SDK implementation for the Schwab API by Langhavens. This implementation includes a reactive, non-blocking client and a blocking client.
 
 # Pre-requisites
-A valid, [Schwab API](https://developer.schwab.com/) Trader Individual, account and an active App with associated `app_key` and `secret` values are required to authenticate with the Schwab API.
+1. A valid, [Schwab API](https://developer.schwab.com/) Trader Individual, account and an active App with associated `app_key` and `secret` values are required to authenticate with the Schwab API.
+2. Requires Java 21+.
 
 # Setup
 1. Add `schwab` under `spring.profiles.active:` in your application properties.
